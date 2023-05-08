@@ -3,7 +3,7 @@
 <div align="center">
   <h1> Application d'analyse des tweets sur la réforme des retraites en France </h1>
   <p>LPWB - IUT de Lannion - 2022-2023</p>
-  <p>  L'application est hébergé à l'aide de Heroku : https://git.heroku.com/quiet-eyrie-32818.git</p>
+  <p>  L'application est hébergé à l'aide de Heroku : https://quiet-eyrie-32818.herokuapp.com/</p>
 </div>
 
 ***
