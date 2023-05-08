@@ -8,13 +8,13 @@
 ***
 
 ### Table of Content
-1. [Présentation](#présentation)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Fonctionnement du code](#fonctionnement)
-5. [Structure du projet](#structure)
-6. [Contribution](#contribution)
-7. [Contact](#contact)
+1. [Présentation](#1.présentation)
+2. [Technologies](#2.technologies)
+3. [Installation](#3.installation)
+4. [Fonctionnement du code](#4.fonctionnement)
+5. [Structure du projet](#5.structure)
+6. [Contribution](#6.contribution)
+7. [Contact](#7.contact)
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 
 ***
