@@ -1,0 +1,16 @@
+<!-- tweets.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center">Tweets {{ sentiment }}</h1>
+  <div class="d-flex justify-content-center m-3">
+    <a href="{{ url_for('sentiments') }}" class="btn btn-primary m-3">Retour à l'analyse des sentiments</a>
+  </div>
+  <ul class="list-group">
+    {% for tweet in tweets %}
+      <li class="list-group-item">{{ tweet }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

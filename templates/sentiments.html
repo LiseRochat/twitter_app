@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5 d-flex align-items-center justify-content-center">
+  <div>
+    <h1 class="text-center">Résultats de l'analyse des sentiments</h1>
+    <img src="data:image/png;base64,{{ pie_chart }}" alt="Répartition des sentiments" class="img-fluid mx-auto d-block rounded">
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <h2 class="text-center text-success">Positifs</h2>
+        <div class="d-flex justify-content-center">
+          <a href="{{ url_for('tweets', sentiment='positif') }}" class="btn btn-outline-success mr-2">{{ sentiment_counts.positif }} Voir les tweets</a>
+          <a href="{{ url_for('wordcloud', sentiment='positif') }}" class="btn btn-outline-info">Nuage de mots</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h2 class="text-center text-warning">Neutres</h2>
+        <div class="d-flex justify-content-center">
+          <a href="{{ url_for('tweets', sentiment='neutre') }}" class="btn btn-outline-warning mr-2">{{ sentiment_counts.neutre }} Voir les tweets</a>
+          <a href="{{ url_for('wordcloud', sentiment='neutre') }}" class="btn btn-outline-info">Nuage de mots</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h2 class="text-center text-danger">Négatifs</h2>
+        <div class="d-flex justify-content-center">
+          <a href="{{ url_for('tweets', sentiment='négatif') }}" class="btn btn-outline-danger mr-2">{{ sentiment_counts.negatif }} Voir les tweets</a>
+          <a href="{{ url_for('wordcloud', sentiment='négatif') }}" class="btn btn-outline-info">Nuage de mots</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!-- home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1 class="text-center">Analyse des tweets sur la réforme des retraites en France</h1>
+    <div class="d-flex justify-content-center">
+      <a href="{{ url_for('sentiments') }}" class="btn btn-primary mt-3">Démarrer l'analyse</a>
+    </div>
+    <div class="mt-5">
+      <h3 class="text-center">Statistiques</h3>
+      <p class="text-center">Nombre total de tweets analysés : {{ total_tweets }}</p>
+      <p class="text-center">Dernière analyse effectuée le {{ last_analysis_date }} à {{ last_analysis_time }}</p>
+  </div>
+  
+  </div>
+  <div class="row mt-5">
+    {% for tweet in tweets %}
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ tweet.sentiment }}</h5>
+          <p class="card-text">{{ tweet.tweet }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
